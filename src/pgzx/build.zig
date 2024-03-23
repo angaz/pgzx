@@ -390,7 +390,7 @@ pub fn addInstallExtensionLibArtifact(self: *Build, artifact: *Step.Compile, nam
     return self.std_build.addInstallFileWithDir(
         artifact.getEmittedBin(),
         .{
-            .custom = self.makeRelPath(self.getPackageLibDir()),
+            .custom = "lib",
         },
         plugin_name,
     );
